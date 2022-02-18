@@ -7,6 +7,10 @@ plugins {
     id 'maven-publish'
 }
 
+plugins {
+  id "org.sonarqube" version "3.3"
+}
+
 repositories {
     mavenLocal()
     maven {
