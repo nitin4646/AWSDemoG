@@ -7,19 +7,21 @@ plugins {
     id 'maven-publish'
 }
 
-plugins {
-  id "org.sonarqube" version "3.3"
-}
 
-sonarqube {
-    properties {
-        property 'sonar.host.url', 'http://localhost:9000'
+plugins {
+    id 'jacoco'
+    // any other plugins
+}
+jacocoTestReport {
+    reports {
+        xml.enabled true
     }
 }
+test.finalizedBy jacocoTestReport
 
-tasks.named('sonarqube').configure {
-    dependsOn test
-}
+
+
+
 
 repositories {
     mavenLocal()
