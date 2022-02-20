@@ -7,18 +7,23 @@ plugins {
     id 'maven-publish'
 }
 
+apply plugin: "jacoco"
 
-plugins {
-    id 'jacoco'
-    // any other plugins
+jacoco {
+  toolVersion = '0.8.1'
 }
+
 jacocoTestReport {
-    reports {
-        xml.enabled true
-        csv.enabled true
-    }
+  group = "reporting"
+  description = "Generate Jacoco coverage reports after running tests."
+  reports {
+    xml.enabled true
+    html.enabled true
+    csv.enabled false
+    html.destination "${buildDir}/jacocoHtml"
+  }
+  sourceDirectories = fileTree(dir: 'src/main/myproject')
 }
-test.finalizedBy jacocoTestReport
 
 
 
