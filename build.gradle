@@ -15,6 +15,7 @@ plugins {
 jacocoTestReport {
     reports {
         xml.enabled true
+        csv.enabled true
     }
 }
 test.finalizedBy jacocoTestReport
