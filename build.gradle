@@ -11,21 +11,21 @@ plugins {
 
 
 
-/*apply plugin: "jacoco"
+
 
 *jacoco {
 *toolVersion = "0.8.7"
 
 }*/
 
-/*jacocoTestReport {
-*reports {
-*xml.enabled = true
-*csv.enabled = true
-*html.enabled = true
+jacocoTestReport {
+reports {
+xml.enabled true
+csv.enabled true
+html.enabled false
 
 }
-}*/
+}
 
 
 
