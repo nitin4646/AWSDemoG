@@ -13,14 +13,15 @@ plugins {
 apply plugin: "jacoco"
 
 jacoco {
-toolVersion = "0.7.9"
-reportsDir = file("$buildDir/customJacocoReportDir")
+toolVersion = "0.8.7"
+
 }
+
 jacocoTestReport {
 reports {
-xml.enabled false
-csv.enabled false
-html.destination file("${buildDir}/jacocoHtml")
+xml.enabled = true
+csv.enabled = true
+html.enabled = true 
 }
 }
 
