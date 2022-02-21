@@ -18,14 +18,14 @@ plugins {
 
 }*/
 
-jacocoTestReport {
-reports {
-xml.enabled = true
-csv.enabled = true
-html.enabled = true
+/*jacocoTestReport {
+*reports {
+*xml.enabled = true
+*csv.enabled = true
+*html.enabled = true
 
 }
-}
+}*/
 
 
 
