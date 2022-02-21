@@ -5,22 +5,24 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'jacoco'
 }
 
 
 
 
-apply plugin: "jacoco"
+/*apply plugin: "jacoco"
 
-jacoco {
-toolVersion = "0.8.7"
+*jacoco {
+*toolVersion = "0.8.7"
 
-}
+}*/
 
 jacocoTestReport {
 reports {
 xml.enabled = true
 csv.enabled = true
+html.enabled = true
 
 }
 }
