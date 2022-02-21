@@ -9,11 +9,7 @@ plugins {
 
 
 
-buildscript {
-dependencies {
-classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.2.1")
-}
-}
+
 apply plugin: "jacoco"
 apply plugin: 'org.sonarqube'
 jacoco {
