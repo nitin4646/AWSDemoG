@@ -23,9 +23,7 @@ csv.enabled false
 html.destination file("${buildDir}/jacocoHtml")
 }
 }
-dependencies {
-testCompile('org.springframework.boot:spring-boot-starter-test')
-}
+
 
 
 
