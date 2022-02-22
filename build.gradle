@@ -36,18 +36,20 @@ buildscript {
 
 dependencies { 
     def tomcatVersion = '8.5.59' 
-    tomcat "org.apache.tomcat.embed:tomcat-embed 
-    core:${tomcatVersion}", 
-    "org.apache.tomcat.embed:tomcat-embed-logging- 
-    juli:${tomcatVersion}" 
-    tomcat("org.apache.tomcat.embed:tomcat-embed- 
-    jasper:${tomcatVersion}") { 
-        exclude group: 'org.eclipse.jdt.core.compiler', 
-             module: 'ecj' 
-    } 
+ 
 } 
 
-
+tomcat { 
+    httpsPort = 8090 
+    enableSSL = true 
+    users { 
+        user { 
+            username = 'admin' 
+            password = 'admin' 
+            roles = ['manager-gui', 'manager-script'] 
+        } 
+    } 
+} 
 
 
 repositories {
