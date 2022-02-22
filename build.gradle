@@ -41,7 +41,8 @@ repositories {
 dependencies {
     implementation 'javax.servlet:servlet-api:2.5'
     implementation 'mysql:mysql-connector-java:5.1.30'
-    testImplementation 'junit:junit:4.10'
+    /*testImplementation 'junit:junit:4.10'*/
+     testImplementation('org.junit.jupiter:junit-jupiter:5.8.2')
 }
 
 /*dependencies {
