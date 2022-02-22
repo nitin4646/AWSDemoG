@@ -33,6 +33,7 @@ steps{
 echo 'deploying to tomcat'
 bat 'gradlew tomcatrun'
 }
+}
 
 }
 }
