@@ -7,6 +7,8 @@ plugins {
     id 'maven-publish'
     id 'jacoco'
     id 'war'
+    id 'com.bmuschko.tomcat' 
+    id 'com.bmuschko.tomcat-base' 
 }
 
 
@@ -22,6 +24,30 @@ csv.enabled true
 html.enabled false
 }
 }
+
+buildscript { 
+    repositories { 
+        jcenter() 
+    } 
+    dependencies { 
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.0' 
+    } 
+} 
+
+dependencies { 
+    def tomcatVersion = '8.5.59' 
+    tomcat "org.apache.tomcat.embed:tomcat-embed 
+    core:${tomcatVersion}", 
+    "org.apache.tomcat.embed:tomcat-embed-logging- 
+    juli:${tomcatVersion}" 
+    tomcat("org.apache.tomcat.embed:tomcat-embed- 
+    jasper:${tomcatVersion}") { 
+        exclude group: 'org.eclipse.jdt.core.compiler', 
+             module: 'ecj' 
+    } 
+} 
+
+
 
 
 repositories {
