@@ -27,5 +27,12 @@ stage('JaCoCo') {
                 bat 'gradlew jacocotestreport'
                    }
                 }
+
+stage('deploy to container') {
+steps{
+echo 'deploying to tomcat'
+bat 'gradlew tomcatrun'
+}
+
 }
 }
