@@ -1,28 +1,32 @@
 pipeline {
 agent any 
 stages {
+
 stage('Checkout') {
             steps {
-                echo 'Checkout'
-            }
-            }
-stage("build"){
-steps{
-bat 'gradlew clean build '
-}
-}
+                        echo 'Checkout'
+                  }
+                  }
+                  
+stage("build") {
+            steps {
+                        bat 'gradlew clean build '
+                   }
+                }
+                
 stage('Test') {
             steps {
                 echo 'Testing'
                 bat 'gradlew test'
-            }
-        }
-        stage('JaCoCo') {
+                   }
+               }
+               
+stage('JaCoCo') {
             steps {
                 echo 'Code Coverage'
                 bat 'gradlew jacocotestreport'
-            }
-            
+                   }
+                }
 }
 }
 }
