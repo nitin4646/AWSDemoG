@@ -67,11 +67,11 @@
                                 <timeoutSec>60</timeoutSec>
                             </artifactory>
                             <publisher>
-                                <contextUrl>http://https://testnitinmhalim.jfrog.io/artifactory</contextUrl>
-                                <username>nitinmhalim@gmail.com</username>
-                                <password>Admin@123</password>
-                                <repoKey>nitin250222-gradle-dev-local</repoKey>
-                                <snapshotRepoKey>nitin250222-gradle-dev-localt</snapshotRepoKey>
+                                <contextUrl>http://localhost:8081/artifactory</contextUrl>
+                                <username>Admin</username>
+                                <password>Admin</password>
+                                <repoKey>abc</repoKey>
+                                <snapshotRepoKey>abc</snapshotRepoKey>
                             </publisher>
                            <buildInfo>
                                 <buildName>plugin-demo</buildName>
